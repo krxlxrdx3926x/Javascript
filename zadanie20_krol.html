@@ -1,1 +1,69 @@
+<html>
 
+<head>
+  <meta charset="UTF-8">
+</head>
+
+<body>
+  <script>
+    function AB_kro() {
+      let aX_kro = parseFloat(document.getElementById('aX').value);
+      let aY_kro = parseFloat(document.getElementById('aY').value);
+
+      let bX_kro = parseFloat(document.getElementById('bX').value);
+      let bY_kro = parseFloat(document.getElementById('bY').value);
+
+
+      document.getElementById("answer").innerHTML = "|AB|= "
+        + (Math.sqrt((aX_kro - bX_kro) ** 2 + (aY_kro - bY_kro) ** 2)).toFixed(2);
+    }
+
+    function BC_kro() {
+      let bX_kro = parseFloat(document.getElementById('bX').value);
+      let bY_kro = parseFloat(document.getElementById('bY').value);
+
+      let cX_kro = parseFloat(document.getElementById('cX').value);
+      let cY_kro = parseFloat(document.getElementById('cY').value);
+
+      document.getElementById("answer").innerHTML = "|BC|= "
+        + (Math.sqrt((cX_kro - bX_kro) ** 2 + (cY_kro - bY_kro) ** 2)).toFixed(2);
+    }
+
+    function AC_kro() {
+      let aX_kro = parseFloat(document.getElementById('aX').value);
+      let aY_kro = parseFloat(document.getElementById('aY').value);
+      let cX_kro = parseFloat(document.getElementById('cX').value);
+      let cY_kro = parseFloat(document.getElementById('cY').value);
+
+      document.getElementById("answer").innerHTML = "|AC|= "
+        + (Math.sqrt((aX_kro - cX_kro) ** 2 + (aY_kro - cY_kro) ** 2)).toFixed(2);
+    }
+
+  </script>
+
+  Podaj X punktu A: <input type="text" id="aX"><br>
+  Podaj Y punktu A: <input type="text" id="aY"><br>
+  <br>
+  <br>
+  Podaj X punktu B: <input type="text" id="bX"><br>
+  Podaj Y punktu B: <input type="text" id="bY"><br>
+  <br>
+  <br>
+  Podaj X punktu C: <input type="text" id="cX"><br>
+  Podaj Y punktu C: <input type="text" id="cY"><br>
+  <br>
+  <br>
+
+
+  <input type="button" value="Oblicz AB" onclick="AB_kro()"><br>
+  <br>
+  <input type="button" value="Oblicz BC" onclick="BC_kro()"><br>
+  <br>
+  <input type="button" value="Oblicz AC" onclick="AC_kro()"><br>
+  <br>
+  <br>
+
+  <div style="color:red;font-size:50px;" id="answer"></div>
+</body>
+
+</html>
