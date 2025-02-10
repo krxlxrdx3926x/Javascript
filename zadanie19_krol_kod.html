@@ -1,0 +1,41 @@
+<html>
+<head>
+</head>
+
+<body>
+<textarea id="w3review" name="w3review" rows="4" cols="50">
+  <html>
+<head>
+ <meta charset="UTF-8">
+</head>
+<body>
+<script type="text/javascript">
+ 
+ function pole_krol()
+ {
+      var a= parseFloat(document.getElementById('dlugosc').value);
+      var b= a*a;
+      document.getElementById("nazwa").innerHTML ="Pole kwadratu= "+b.toFixed(2)+" cm^2"; 
+ }
+
+ 
+ function obwod_krol()
+ {
+    var a= parseFloat(document.getElementById('dlugosc').value);
+    var b= 4*a;
+    document.getElementById("nazwa").innerHTML ="Obwód kwadratu= "+b.toFixed(2)+" cm"; 
+ }
+</script>
+
+ 
+ <h1>Wszystko o KWADRACIE</h1><br><br>
+ Podaj długość boku: <input type="text" id="dlugosc" value="podaj długość"> cm<br><br><br>
+ <input type="button" name="pole_krol" value="Oblicz pole" Onclick="pole_krol()"><br><br>
+ <input type="button" name="obwod_krol" value="Oblicz obwód" Onclick="obwod_krol()"><br><br>
+ <div style="color:red;font-size:50px;"id="nazwa"></div>
+</body>
+</html>
+</textarea>
+</body>
+</html>
+  <!-- Zuzanna Król -->
