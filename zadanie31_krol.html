@@ -1,1 +1,33 @@
+<html>
+ <head>
+ <script type="text/javascript">
+         var samochod = {
+            kolor: 'Czarny',
+            producent: 'Mercedes',
+            model: 'CLE Kabriolet',
+            samochod_wyswietl_krol: function () {
+                document.write('Kolor: ' + this.kolor + '<br>');
+                document.write('Producent: ' + this.producent + '<br>');
+                document.write('Model: ' + this.model + '<br>');
+            }
+        }
+samochod.samochod_wyswietl_krol();
+samochod.rocznik="2024";
+samochod.samochod_wyswietl_krol=function() {alert('rocznik: ' + this.rocznik + 'rok')}
 
+ </script>
+ </head>
+<body>
+<br>
+ Programowanie obiektowe. <br>
+ Obiekt to samochod<br>
+ Pola:<br>
+ kolor<br>
+ producent<br>
+ model<br>
+ metoda: samochod_wyswietl_krol<br>
+ nowe pole to rocznik <br>
+ nowa metoda to samochod.samochod_wyswietl_krol<br>
+</body>
+</html>
+<!-- Zuzanna Król -->
