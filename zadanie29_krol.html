@@ -1,1 +1,140 @@
+<!DOCTYPE html>
+<html lang="pl">
 
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <h1>1. W jaki sposób można określić właściwość danego obiektu?</h1>
+    <p>
+        Sposób 1:
+    <pre>
+        <code>
+          nazwa_obiektu.nazwa_właściwości="tekst";
+          auto.marka="Opel Omega";
+        </code>
+        </pre>
+    Sposób 2:
+    <pre>
+        <code>
+        nazwa_obiektu.nazwa_właściwości=liczba;
+
+          auto.rok=1996;
+          auto.cena=25000;
+        </code>
+        </pre>
+    </p> <br><br>
+
+    <h1>2. W jaki sposób można odwołać się do pól (właściwości) i metod?</h1>
+    <p>
+        Odwołanie do właściwości można odwołać się podobnie jak do zwykłych zmiennych i funkcji, tylko przed nazwą trzeba umieścić nazwę obiektu.
+    <pre>
+        <code>
+          console.log(samochod1.kolor);
+        </code>
+    </pre>
+    </p><br><br>
+
+  
+    <h1>3. Wymień cechy charakterystyczne konstruktora.</h1>
+    <p>
+    <ul>
+        <li>wywoływany automatycznie w chwili tworzenia obiektu danej klasy;</li>
+        <li>Może przyjmować argumenty;</li>
+        <li>Nie zwraca wartości;</li>
+        <li>Nazywa się tak jak klasa.</li>
+    </ul>
+    </p><br><br>
+
+    <h1>4. Konstruowanie obiektu na podstawie przykładu obiekt ma trzy pola oraz jedną metodę.</h1>
+    <p>
+    <pre>
+        <code>
+        var osoba_1 =
+{
+nazwisko : ‘Kowalski’,
+imie :’Jan’,
+zawod :’piekarz’,
+wyświetl :function ()
+{
+Document.write(this.nazwisko + ‘ ‘ + this.imie)
+}
+}
+        </code>
+        </pre>
+    </p><br><br>
+
+    <h1>5. Znaczenie słowa this. Jak oddzielamy pola oraz metody?</h1>
+    <p>
+        This: pozwala odwołać się do pola lub metody obiektu z wnętrza tego obiektu. <br>
+        Oddzielanie pól i metod jest robione poprzez przecinek w obrębie jednego obiektu.
+    </p><br><br>
+
+    <h1>6. Konstruktor w JS na podstawie przykładu wraz z opisem.</h1>
+    <p>
+      Zostanie utworzony konstruktor o nazwie klient z właściwościami nazwisko, imie, zawod oraz
+metodą wypisz(). Właściwościom obiektu zostały przypisane wartości parametrów. Użyte słowo
+kluczowe this odnosi się do aktualnego obiektu i pozwala na przypisanie wartości parametru do
+odpowiedniego pola tego obiektu.
+    <pre>
+        <code>
+        function klient(nazwisko_k,imie_k,zawod_k)
+{
+this.nazwisko=nazwisko_k;
+this.imie=imie_k;
+this.zawod=zawod_k;
+wypisz = function ()
+ {
+ alert(this.nazwisko + ' ' + this.imie)
+ }
+}
+        </code>
+        </pre>
+    </p><br><br>
+
+    <h1>7. Znaczenie słowa kluczowego New wraz z przykładem.</h1>
+    <p>
+        New: Służy do tworzenia nowych obiektów na podstawie konstruktora. 
+      Przykład:
+    <pre>
+        <code>
+        function klient(nazwisko_k,imie_k,zawod_k)
+{
+this.nazwisko=nazwisko_k;
+this.imie=imie_k;
+this.zawod=zawod_k;
+wypisz = function ()
+ {
+ alert(this.nazwisko + ' ' + this.imie)
+ }
+}
+        </code>
+        </pre>
+    </p><br><br>
+
+    <h1>8. Znaczenie słowa kluczowego prototype wraz z przykładem i opisem.</h1>
+    <p>
+        Prototype: służy do definiowania metod i właściwości dla obiektu.
+    <pre>
+        <code>
+        function klient()
+{
+this.nazwisko='Bielski';
+this.imie='Paweł';
+}
+klient.prototype.pisz_dane = function ()
+ {
+ document.write(this.nazwisko + ' ' + this.imie)
+ }
+klient.prototype.zawod = 'kierowca';
+var osoba1 = new klient();
+osoba1.pisz_dane();
+
+        </code>
+        </pre>
+    </p>
+</body>
+
+</html>
+<!-- Zuzanna Król -->
