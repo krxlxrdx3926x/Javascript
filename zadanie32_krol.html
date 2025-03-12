@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script type="text/javascript">
+        
+        function samochod(kolor, producent, model) {
+            this.kolor = kolor;
+            this.producent = producent;
+            this.model = model;
+        }
+
+        
+        samochod.prototype.samochod_wyswietl_krol = function () {
+            document.write('Kolor: ' + this.kolor + '<br>');
+            document.write('Producent: ' + this.producent + '<br>');
+            document.write('Model: ' + this.model + '<br>');
+        };
+
+        
+        var samochod1 = new Samochod('Szary', 'Mazda', 'CX-5');
+        var samochod2 = new Samochod('Biały', 'Mercedes', 'A180');
+        var samochod3 = new Samochod('Czerwony', 'Fiat', '126P');
+
+        
+        function showTask() {
+            samochod1.samochod_wyswietl_krol();
+            samochod2.samochod_wyswietl_krol();
+            samochod3.samochod_wyswietl_krol();
+
+        }
+
+        Router.prototype.rocznik = "2000";
+
+        
+        samochod.prototype.samochod_wyswietl_krol = function () {
+            alert('Rocznik: ' + this.rocnzik);
+        };
+        showTask();
+        samochod3.samochod_wyswietl_krol();
+    </script>
+</head>
+
+<body>
+    <p>Programowanie Obiektowe</p>
+</body>
+
+</html>
+<!-- Zuzanna Król -->
