@@ -4,8 +4,32 @@
 
 <body>
 <textarea id="w3review" name="w3review" rows="10" cols="50">
+<!DOCTYPE html> 
+ <head> 
+ <title>Sprawdzenie danych Król </title> 
+ <meta charset="utf-8"> 
+ </head> 
+<body>
+<div style="color:red;font-size:50px;">
+ <script language="JavaScript">
+ do {
+var liczba1=prompt("wysokość=","");
+ var h_kro=parseFloat(liczba1);
+ }
+ while ( h_kro<=0);
+ do {
+var liczba1=prompt("podstawę=","");
+ var a_kro=parseFloat(liczba1);
+ }
+ while(!( a_kro>0));
+var Pole=a_kro*h_kro/2;
+ document.write("Pole="+Pole.toFixed(2)+" cm^2"+"<br>");
+ </script>
+</div>
+</body>
+</html>
+<!-- Zuzanna Król -->
 
-	
 </textarea>
 </body>
 </html>
