@@ -1,1 +1,37 @@
+<!DOCTYPE html> 
+<html lang="pl"> 
+<head>  
+<meta charset="utf-8"> 
+<script language="JavaScript"> 
 
+ let l1_kro=prompt("podaj pierwszą liczbę=",""); 
+ let l2_kro=prompt("podaj drugą liczbę=",""); 
+ let w_kro;  
+  
+  if(l1_kro>l2_kro)
+  {
+  for(i=l2_kro;i<=l1_kro;i++)
+  {
+  if(i%2==1)
+  document.write("style="color:green;font-size:18px""+i+"<br>");
+  }
+  }
+  else if(l2_kro>l1_kro)
+  {
+  for(i=l1_kro;i<=l2_kro;i++)
+  { if(i%2==1)
+  document.write("style="color:blue;font-size:9px""+i+"<br>");
+ }
+  }
+  else
+  {
+  document.write("liczby są do siebie równe"); 
+  }
+
+</script> 
+
+</head>  
+<body>  
+</body>  
+</html>
+<!-- Zuzanna Król -->
