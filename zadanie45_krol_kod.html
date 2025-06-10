@@ -4,7 +4,91 @@
 
 <body>
 <textarea id="w3review" name="w3review" rows="10" cols="50">
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            text-align: center;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 10px;
+            cursor: pointer;
+        }
+        #output {
+            margin-top: 30px;
+            border: 1px solid #ccc;
+            padding: 20px;
+            min-height: 100px;
+            text-align: left;
+            overflow-wrap: break-word; 
+        }
+        .blue-text {
+            color: blue;
+        }
+        .green-text {
+            color: green;
+        }
+    </style>
+</head>
+<body>
 
+    <div id="output">
+        </div>
+
+    <script>
+
+        const nazwisko = "Król"; 
+        const imie = "Zuzanna";
+
+        const liczba_liter_nazwiska = nazwisko.length;
+        const ile_razy_wyswietlic_kro = 10;
+        const wielkosc_liter_kro = 43;
+
+
+        function zadanie45_kro() {
+            const outputDiv = document.getElementById('output');
+            outputDiv.innerHTML = ''; 
+
+            let input_kro = prompt("Wprowadź liczbę:");
+            let liczba_kro = parseInt(input_kro);
+
+            if (isNaN(liczba_kro)) {
+                alert("Wprowadzona wartość nie jest liczbą. Spróbuj ponownie.");
+                return;
+            }
+
+            outputDiv.innerHTML += `<p>Ilość wykonania pętli = ${ile_razy_wyswietlic_kro}</p>`;
+            outputDiv.innerHTML += `<p>Wielkość liter = ${wielkosc_liter_kro}px</p>`;
+
+            if (liczba_kro % 2 === 0) {
+                for (let i_kro = 0; i_kro < ile_razy_wyswietlic_kro; i_kro++) {
+                    const p = document.createElement('p');
+                    p.textContent = nazwisko;
+                    p.style.color = "blue";
+                    p.style.fontSize = `${wielkosc_liter_kro}px`;
+                    outputDiv.appendChild(p);
+                }
+            } else {
+                for (let i_kro = 0; i_kro < ile_razy_wyswietlic_kro; i_kro++) {
+                    const p = document.createElement('p');
+                    p.textContent = imie;
+                    p.style.color = "green";
+                    p.style.fontSize = `${wielkosc_liter_kro}px`;
+                    outputDiv.appendChild(p);
+                }
+            }
+        }
+    </script>
+
+</body>
+</html>
+<!-- Zuzanna Król -->
 	
 </textarea>
 </body>
