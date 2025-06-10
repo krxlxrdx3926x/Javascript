@@ -6,16 +6,21 @@
 <body>
 <textarea id="w3review" name="w3review" rows="4" cols="50">
 <html> 
-  <head>
-    <meta charset="utf-8">
-  </head>
 <body> 
 <div style="color:red;font-size:50px;"> 
 <script language="JavaScript"> 
-for(i_krol=1;i_krol<=10;i_krol++) 
+  var nazwisko = {
+    i_krol: 'krol',
+
+    nazwisko_wyswietl: function()
 { 
-document.write("wyświetlam "+i_krol+" raz"+"  Król"+"<br>"); 
+document.write("wyświetlam "+i+" raz"+"  Krol"+"<br>"); 
 } 
+  }
+  for(i=1;i<=10;i++) 
+    {
+      nazwisko.nazwisko_wyswietl();
+    }
 </script> 
 </div> 
 </body> 
