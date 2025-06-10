@@ -4,52 +4,29 @@
 
 <body>
 <textarea id="w3review" name="w3review" rows="4" cols="50">
-<!DOCTYPE html>
-<html lang="pl">
+<html> 
 <head>
-    <meta charset="UTF-8">
+<meta charset="utf-8">
 </head>
-<body>
+ <body> 
+ <div> 
+    <script language="JavaScript"> 
+  let imie_kro="zuzanna";
+  let nazwisko_kro="krol";
 
-    <div id="wynik"></div>
-
-    <script>
-        var nazwisko = "Król";
-        var imie = "Zuzanna";
-
-        var kro = nazwisko.length;
-
-        var koniec_petli_kro = (liczba_liter_nazwiska % 4) + 10;
+document.write("ilość wykonania pętli  =  10 "+"<br>"+" wielkość liter   = 43px ")
       
-        var wielkosc_liter_kow = (liczba_liter_nazwiska % 3) + 40;
-      
-        var wynik_div = document.getElementById('wynik');
-
-
-        wynik_div.innerHTML += `<p>ilość wykonania pętli = ${koniec_petli_kro}</p>`;
-        wynik_div.innerHTML += `<p>wielkość liter = ${wielkosc_liter_kro}px</p><br>`;
-
-        
-        for (let i_kro = 1; i_kro <= koniec_petli_kro; i_kro++) {
-            let tekst_do_wyswietlenia;
-            let kolor_tekstu;
-
-            if (i_k % 2 !== 0) { 
-                tekst_do_wyswietlenia = nazwisko;
-                kolor_tekstu = "blue";
-            } else { 
-                tekst_do_wyswietlenia = imie;
-                kolor_tekstu = "green";
-            }
-
-            wynik_div.innerHTML += `<p style="font-size: ${wielkosc_liter_kro}px; color: ${kolor_tekstu};">${i_kro}. ${tekst_do_wyswietlenia}</p>`;
-        }
-    </script>
-
-</body>
-</html>
+      for(i_kro=1; i_kro<=11; i_kro++)
+					if(i_kro % 2==0)
+                      {document.write("<font-size: 42px>"+imie_kro+"</size><br>");} 
+					else{
+                      {document.write("<font-size: 42px>"+nazwisko_kro+"</size><br>");} 
+           } 
+                  </script> 
+ </div> 
+ </body> 
+</html> 
 <!-- Zuzanna Król -->
-
 </textarea>
 </body>
 </html>
