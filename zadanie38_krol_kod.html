@@ -4,7 +4,89 @@
 
 <body>
 <textarea id="w3review" name="w3review" rows="10" cols="50">
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  background-color: silver; 
+}
+p {
+  color: green;
+  font-size: 3px;
+}
+#menu {
+  color: red;
+  font-size: 3px;
+}
+</style>
+</head>
+<body>
 
+<p id="nazwisko">Moje nazwisko to: Zuzanna Król</p>
+<p id="oblicz"></p>
+<p id="menu"></p>
+<br><br>
+<input type="button" name="wybór opcji" value="wybór opcji" onclick="opcja_kro()">
+<br><br>
+<p id="opcje"></p>
+
+<script>
+  const imie_kro = "Zuzanna";
+  const nazwisko_kro = "Król";
+  
+  const dur_kro = 26 + 50;
+  const liczba1_kro = imie_bor.length;
+  const liczba2_kro = liczba1_kro + 7;
+  const liczba3_kro = nazwisko_kro.length;
+  const liczba4_kro = liczba3_kro + 4;
+  const lln_kro = liczba3_kro + 20;
+
+  document.getElementById("oblicz").innerHTML = 
+    "liczba1 = " + liczba1_kro + "<br>" +
+    "liczba2 = " + liczba1_kro + " + 7 = " + liczba2_kro + "<br>" +
+    "liczba3 = " + liczba3_kro + "<br>" +
+    "liczba4 = " + liczba3_kro + " + 4 = " + liczba4_kro + "<br>";
+	
+  document.getElementById("menu").innerHTML = 
+	"------------MENU------------" + "<br>" +
+	liczba1_kro + "- wyświetlanie teorii o operatorach logicznych" + "<br>" +
+	lln_kro + "- sprawdzanie czy liczba należy do przedziału (od " + liczba1_kro + "; do " + liczba2_kro + "]" + "<br>" +
+	dur_kro + "- czy liczba należy do przedziału (-oo ; " + liczba1_kro + ") lub [" + liczba2_kro + " ; +oo)";
+
+function opcja_kro() {
+    let opcja = parseInt(prompt("Podaj opcję: ", ""));	
+
+    if(opcja == 7) {
+        document.getElementById("opcje").innerHTML = 
+        "<p style='color:blue; font-size: 7px;'>Jesteś w opcji 7 --> teoria</p>" + 
+        "<p style='color:green; font-size: 5px;'>&& i x=3 y=4 (x<0 && y>2) wynik → prawda</p>" + 
+        "<p style='color:green; font-size: 5px;'>|| lub x=3 y=4 (x==8 || y==6) wynik → fałsz</p>" + 
+        "<p style='color:green; font-size: 5px;'>! zaprzeczenie x=3 y=4 !(x==y) wynik → prawda</p>";
+    } 
+    else if (opcja == 24) {
+        let przedzial = parseFloat(prompt("Podaj liczbę: ", ""));
+        let wyp_kro = "<p style='color:green; font-size: 7em;'>Jesteś w opcji 24 --> Przedział";
+        wyp_kro += (przedzial >= 9 && przedzial <= 16) ? "<br>Liczba należy do przedziału" : "<br>Liczba nie należy do przedziału";
+        wyp_kro += "</p>";
+        document.getElementById("opcje").innerHTML = wyp_kro;
+    } 
+    else if (opcja == 66) {
+        let przedzial2 = parseFloat(prompt("Podaj liczbę: ", ""));
+        let wyp2_kro = "<p style='color:green; font-size: 7px;'>Jesteś w opcji 66 --> Przedział";
+        wyp2_kro += (przedzial2 < 9 || przedzial2 >= 16) ? "<br>Liczba należy do przedziału" : "<br>Liczba nie należy do przedziału";
+        wyp2_kro += "</p>";
+        document.getElementById("opcje").innerHTML = wyp2_kro;
+    } 
+    else {
+        document.getElementById("opcje").innerHTML = "<p style='color:red; font-size: 7px;'>Nie ma takiej opcji</p>";
+    }
+}
+</script>
+
+</body>
+</html>
+<!-- Zuzanna Król -->
 	
 </textarea>
 </body>
